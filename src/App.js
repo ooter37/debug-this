@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
 
-class App extendz component {
-  contsructor(props) {
+class App extends Component {
+  constructor(props) {
+    super()
     this.state = {
       friendsList: ["john", "jacob", "jingle", "heimer", "schmidt"],
       friend: ""
@@ -24,7 +25,7 @@ class App extendz component {
 
   render() {
     const mappedFreinds = this.state.friendsList.map((friend, index) => {
-      <div>
+      return <div>
         <span key={index}>{friend}</span>
         <button onClick={this.state.deleteFriend} />
       </div>;
@@ -42,5 +43,5 @@ class App extendz component {
     );
   }
 }
-}
+
 export default App;
